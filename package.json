@@ -1,0 +1,67 @@
+{
+  "name": "image-compress-hook",
+  "version": "1.0.0",
+  "description": "配合git hook快速方便使用的图片压缩",
+  "bin": {
+    "image-compress": "./dist/core/pre-commit.js",
+    "image-commit": "./dist/core/post-commit.js"
+  },
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "dev": "npm run clean && tsc -w",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "image",
+    "compress",
+    "git",
+    "git hook",
+    "hook"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "cross-env NODE_ENV=prod eslint",
+      "git add"
+    ]
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "slc <slc69152040@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@kjy/eslint-config-kjy": "^0.4.6",
+    "@types/fs-extra": "^9.0.9",
+    "@types/imagemin": "^7.0.0",
+    "@types/imagemin-mozjpeg": "^8.0.1",
+    "@types/node": "^14.14.22",
+    "@typescript-eslint/eslint-plugin": "^4.1.0",
+    "@typescript-eslint/parser": "^4.1.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.19.0",
+    "eslint-plugin-import": "^2.24.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.3",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "fs-extra": "^9.1.0",
+    "imagemin": "^7.0.1",
+    "imagemin-giflossy": "^5.1.10",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-upng": "^3.0.0",
+    "imagemin-webp": "^6.0.0",
+    "is-animated": "^2.0.1",
+    "ora": "^5.4.1",
+    "webp-converter": "^2.3.3"
+  },
+  "peerDependencies": {}
+}
