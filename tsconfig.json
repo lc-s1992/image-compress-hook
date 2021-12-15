@@ -24,7 +24,7 @@
     "baseUrl": "./",
     "typeRoots": [
       "node_modules/@types/*",
-      "src/types"
+      "core/types"
     ],
     "types": [
       "node"
@@ -34,7 +34,7 @@
     "emitDecoratorMetadata": true
   },
   "include": [
-    "src/**/*"
+    "core/**/*"
   ],
   "exclude": [
     "__tests__/**/*",
