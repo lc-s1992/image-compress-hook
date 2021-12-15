@@ -41,7 +41,7 @@ export default async function compress(images: string[]) {
 
   const spinner = ora({ color: 'blue', text: chalk.white('图片压缩中...\n') }).start();
 
-  await Promise.all(list.map(async (el) => {
+  await Promise.allSettled(list.map(async (el) => {
     await new Promise((resolve) => {
       imagemin(imgFilters[el].map((img) => `${el}/${img}`), {
         destination: el,

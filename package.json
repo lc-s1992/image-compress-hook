@@ -1,6 +1,6 @@
 {
   "name": "image-compress-hook",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "配合git hook快速方便使用的图片压缩",
   "bin": {
     "image-compress": "./dist/bin/pre-commit.js",
@@ -40,8 +40,15 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lc-s1992/image-compress-hook.git"
+  },
   "author": "slc <slc69152040@gmail.com>",
   "license": "ISC",
+  "engines": {
+    "node": ">=10"
+  },
   "devDependencies": {
     "@kjy/eslint-config-kjy": "^0.4.6",
     "@types/fs-extra": "^9.0.9",

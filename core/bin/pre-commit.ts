@@ -7,7 +7,8 @@ import compress from '../utils/compress';
 
 childProcess.execSync('git config core.quotepath false');
 // 获取当前需要提交的文件名
-const diffBuffer = childProcess.execSync('git diff --cached --name-only HEAD');
+// 添加(A)、复制(C)、删除(D)、修改(M)、重命名(R)
+const diffBuffer = childProcess.execSync('git diff --cached --diff-filter=ACMR --name-only HEAD');
 // 当前需要提交的文件名列表形式
 const diffStr = diffBuffer.toString().replace(/[\n\r]/g, ',').trim();
 

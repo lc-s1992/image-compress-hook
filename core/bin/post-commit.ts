@@ -36,19 +36,19 @@ const diffImage = diffStr.split(',').filter((el: string) => el.match(/([\s\S]*).
 // 不存在图片改变
 if (!diffImage.length) {exit(0);};
 
-console.log('执行 add');
+log('执行 add');
 childProcess.execSync(`git add ${diffImage.join(' ')}`);
 
 if (lastBeforeCommitId) {
-  console.log('执行 reset');
+  log('执行 reset');
   childProcess.execSync(`git reset --soft ${lastBeforeCommitId}`);
 }
 
-console.log('执行 commit');
+log('执行 commit');
 
 childProcess.exec(`git commit -m "${lastCommitMsg}" --no-verify`, (error) => {
   if (error) {
-    console.log(error);
+    log(error);
     exit(0);
   }
 });
