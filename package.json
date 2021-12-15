@@ -1,6 +1,6 @@
 {
   "name": "image-compress-hook",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "配合git hook快速方便使用的图片压缩",
   "bin": {
     "image-compress": "./dist/bin/pre-commit.js",
@@ -17,7 +17,14 @@
     "compress",
     "git",
     "git hook",
-    "hook"
+    "image compress",
+    "imagemin",
+    "minify",
+    "optimize",
+    "png",
+    "gif",
+    "jpg",
+    "jpeg"
   ],
   "husky": {
     "hooks": {

@@ -5,7 +5,7 @@
 **注**：当前方案暂不支持apng图片,请自行压缩后再提交
 
 ## 安装
-建议配合npm包`husky`,在package.json下配置进行快速使用
+建议配合npm包`husky`一同使用
 **注**：
 
   1.由于个别npm源的问题，可能需要走科学上网流程才能安装
@@ -17,6 +17,7 @@ yarn add image-compress husky -D
 ```
 
 ## 使用
+在package.json下配置
 
 ```
 {
