@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "配合git hook快速方便使用的图片压缩",
   "bin": {
-    "image-compress": "./dist/core/pre-commit.js",
-    "image-commit": "./dist/core/post-commit.js"
+    "image-compress": "./dist/bin/pre-commit.js",
+    "image-commit": "./dist/bin/post-commit.js"
   },
   "scripts": {
     "build": "npm run clean && tsc",
